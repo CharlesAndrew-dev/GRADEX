@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="icon" href="G.png" type="image/x-icon">
+    <script src="script.js"></script>
+    <style>
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: hsla(0, 0%, 98%, 1);
+            background-image: radial-gradient(at 22% 79%, hsla(47, 79%, 69%, 1) 0px, transparent 50%),
+            radial-gradient(at 93% 7%, hsla(359, 82%, 35%, 1) 0px, transparent 50%);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            font-family: 'Jersey 10', serif;
+        }
+    </style>
+</head>
+<body class="m-0 p-0 flex-col overflow-hidden">
+    <div class="flex flex-col items-center justify-center h-screen">
+        <h2 class="justify-center font-semibold">Made By Charles Andrew Taripe</h2>
+        <div class="bg-slate-60 bg-opacity-20 backdrop-blur-lg border border-gray-500 rounded-lg p-3 pb-1 w-1/5">
+            <div class="text-center">
+                <h1 class="text-8xl font-bold text-red-500">
+                    GRADEX
+                </h1>
+                <p>Enter your grades and corresponding units below:</p>
+
+                <div id="rowsContainer" class="m-3">
+                    <div class="flex flex-wrap items-center justify-center text-center m-0 p-0 gap-0">
+                        <div class="flex flex-col items-center w-1/4 m-3">
+                            <input
+                                class="units text-center p-1 m-1 w-full font-semibold border rounded-lg"
+                                type="number"
+                                placeholder="Units"
+                                min="1"
+                                required
+                            />
+                        </div>
+                        <div class="flex flex-col items-center w-1/4 m-3">
+                            <input
+                                class="grades text-center p-1 m-1 w-full font-semibold border rounded-lg"
+                                type="number"
+                                placeholder="Grade"
+                                min="1"
+                                max="5"
+                                step="0.01"
+                                required
+                            />
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="flex items-center justify-center gap-3 m-3">
+                    <button id="addRow" class="bg-yellow-400 p-3 rounded-lg font-bold">
+                        Add Courses
+                    </button>
+                    <button id="calculate" class="bg-yellow-400 p-3 rounded-lg font-bold">
+                        Calculate GWA
+                    </button>
+                </div>
+                <div id="result" class="result"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<h2 class="text-xl font-geist font-semibold">Units</h2>
