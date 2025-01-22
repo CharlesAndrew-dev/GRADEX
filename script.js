@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const unitsArr = Array.from(unitsInputs).map(input => {
             const value = parseFloat(input.value);
-            console.log(`Units input value: ${value}`);  // Debugging log
-            return isNaN(value) ? 0 : value;  // Return 0 if the value is invalid
+            console.log(`Units input value: ${value}`); 
+            return isNaN(value) ? 0 : value;  
         });
 
         const gradesArr = Array.from(gradesInputs).map(input => {
             const value = parseFloat(input.value);
-            console.log(`Grades input value: ${value}`);  // Debugging log
-            return isNaN(value) ? 0 : value;  // Return 0 if the value is invalid
+            console.log(`Grades input value: ${value}`);  
+            return isNaN(value) ? 0 : value; 
         });
 
         if (unitsArr.includes(0) || gradesArr.includes(0)) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     addRowButton.addEventListener("click", () => {
-        console.log("Add Row clicked");  // Debugging line
+        console.log("Add Row clicked");  
         addRow();
     });
     calculateButton.addEventListener("click", calculateGwa);
